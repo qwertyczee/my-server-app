@@ -2,7 +2,7 @@ document.getElementById('create-server-form').addEventListener('submit', functio
     e.preventDefault();
     const serverName = document.getElementById('server-name').value;
 
-    fetch('/create-server', {
+    fetch('https://web-production-c3c5.up.railway.app/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
