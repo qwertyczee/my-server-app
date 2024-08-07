@@ -2,7 +2,7 @@ document.getElementById('create-server-form').addEventListener('submit', functio
     e.preventDefault();
     const serverName = document.getElementById('server-name').value;
 
-    fetch('https://my-server-backend.vercel.app/api/create_server', { // Opravená URL
+    fetch('https://my-server-backend.vercel.app/api/create_server', { // Correct endpoint URL
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
