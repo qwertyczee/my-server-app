@@ -2,7 +2,7 @@ document.getElementById('create-server-form').addEventListener('submit', functio
     e.preventDefault();
     const serverName = document.getElementById('server-name').value;
 
-    fetch('https://<YOUR_GITHUB_PAGES_URL>/create-server', {
+    fetch('https://my-server-backend.vercel.app/api/create_server', { // Opravená URL
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -15,7 +15,7 @@ document.getElementById('create-server-form').addEventListener('submit', functio
             // Update the server list
             const serverList = document.getElementById('server-list');
             const newServer = document.createElement('div');
-            newServer.innerText = data.server.name;
+            newServer.innerText = data.message;
             serverList.appendChild(newServer);
         } else {
             alert('Failed to create server');
