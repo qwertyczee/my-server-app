@@ -2,7 +2,7 @@ document.getElementById('create-server-form').addEventListener('submit', functio
     e.preventDefault();
     const serverName = document.getElementById('server-name').value;
 
-    fetch('https://web-production-c3c5.up.railway.app/', {
+    fetch('https://<YOUR_GITHUB_PAGES_URL>/create-server', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
